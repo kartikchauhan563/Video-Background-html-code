@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+</head>
+
+<body>
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="./background.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>fullscreen Video Banner</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eum, placeat commodi, in voluptas numquam
+                fugiat reiciendis ipsam itaque culpa dolore accusamus natus expedita neque officia quasi maxime aut
+                illum?</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 1000px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .banner {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    .banner video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .banner .content {
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .banner .content h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 4.5em;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 1000;
+    }
+
+    .banner .content p {
+        font-size: 1.5em;
+        color: #fff;
+
+    }
+</style>
